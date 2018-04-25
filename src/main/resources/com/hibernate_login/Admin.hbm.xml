@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 22, 2018 12:58:03 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="mydb" name="com.login.Pojos.Admin" optimistic-lock="version" table="admin">
+    <id name="stockmanagerIdstockmanager" type="int">
+      <column name="stockmanager_idstockmanager"/>
+      <generator class="foreign">
+        <param name="property">stockmanager</param>
+      </generator>
+    </id>
+    <one-to-one class="com.login.Pojos.Stockmanager" constrained="true" name="stockmanager"/>
+    <property name="adminname" type="string">
+      <column length="45" name="adminname" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

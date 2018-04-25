@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 22, 2018 12:58:03 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="mydb" name="com.login.Pojos.Stockmanager" optimistic-lock="version" table="stockmanager">
+    <id name="idstockmanager" type="int">
+      <column name="idstockmanager"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="stockmanagername" type="string">
+      <column length="45" name="stockmanagername" not-null="true"/>
+    </property>
+    <property name="stockmanageremail" type="string">
+      <column length="45" name="stockmanageremail" not-null="true"/>
+    </property>
+    <property name="stockmanagerpasswd" type="string">
+      <column length="45" name="stockmanagerpasswd" not-null="true"/>
+    </property>
+    <property name="stockmanagerphone" type="string">
+      <column length="45" name="stockmanagerphone" not-null="true"/>
+    </property>
+    <one-to-one class="com.login.Pojos.Admin" name="admin"/>
+  </class>
+</hibernate-mapping>
